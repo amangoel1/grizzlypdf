@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Product")
+@Table(name="product")
 public class Product {
 	private String productId;
 	private String name;
@@ -14,7 +14,14 @@ public class Product {
 	private String description;
 	private String brand;
 	private String category;
+private int rating;
 	
+	public int getRating() {
+	return rating;
+}
+public void setRating(int rating) {
+	this.rating = rating;
+}
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -83,7 +90,7 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", name=" + name + ", price=" + price + ", description="
-				+ description + ", brand=" + brand + ", category=" + category + "]";
+				+ description + ", brand=" + brand + ", category=" + category + ", rating="+ rating+ "]";
 	}
 	
 

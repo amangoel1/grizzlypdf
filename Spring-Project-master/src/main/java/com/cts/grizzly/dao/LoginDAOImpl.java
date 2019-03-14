@@ -162,7 +162,7 @@ public class LoginDAOImpl implements LoginDAO {
 	@Override
 	public void resetStatus(Profile profile) {
 		// TODO Auto-generated method stub
-		profile.setUserStatus(0);
+		profile.setUserStatus(1);
 		sessionFactory.getCurrentSession().saveOrUpdate(profile);
 	}
 

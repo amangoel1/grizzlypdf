@@ -36,5 +36,13 @@ public class Category {
 		this.id = id;
 		this.name = name;
 	}
+	public Category() {
+		super();
+	}
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + "]";
+	}
+	
 	
 }

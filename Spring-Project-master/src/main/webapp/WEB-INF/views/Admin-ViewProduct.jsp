@@ -36,7 +36,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                            <form class="mx-2 my-auto w-full">
-                                <a href="LogoutServlet" class="btn btn-secondary  form-rounded" >Logout
+                                <a href="logout.html" class="btn btn-secondary  form-rounded" >Logout
            
             </a>
                             </form>

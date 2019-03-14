@@ -39,14 +39,14 @@ window.location = elm.value;
                    </li>
                    <li class="nav-item">
                        <span class="navbar-text">
-                           Welcome, ${user.name}
+                           Welcome, ${user.userName}
                        </span>
                    </li>
                    </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <form class="mx-2 my-auto w-full">
-                                <a href="LogoutServlet" class="btn btn-secondary  form-rounded" >Logout
+                                <a href="logout.html" class="btn btn-secondary  form-rounded" >Logout
            
             </a>
                             </form>
@@ -72,8 +72,8 @@ window.location = elm.value;
     <picture>
         <img src="images/profile.png" alt="Profile picture" width="50px"></img>
     </picture><br>
-    <input id="prodId" name="userId" type="hidden" value=${user.userId}>
-    <b>${user.name}</b>
+    <input id="prodId" name="userName" type="hidden" value=${user.userName}>
+    <b>${user.userName}</b>
 <br><br>
 ID: <br> ${user.id}
 <br><br>
@@ -108,13 +108,12 @@ ${user.designation}
                               <div id="home" class="container tab-pane active"><br>
         
                         <div class="col-md-12 bg-light">
-                                <form class="mx-2 my-auto d-inline w-20" action="ShowProductByCategoryServlet" method="POST">
+                                <form class="mx-2 my-auto d-inline w-20" action="category.html" method="POST">
                                         <div class="input-group">
                                             <input list="category" name="browser" class="form-rounded" placeholder="Choose Action">
                                             <datalist id="category">
-                                              <option value="Personal Care" selected>
-                                              <option value="Laptops">
-                                              <option value="Art Supplies">
+                                              <option value="Personal Care" selected></option>
+                                             
                                              </datalist>    
 
 
@@ -129,13 +128,13 @@ ${user.designation}
                                                   &emsp;&emsp;
                                                       <select name="select-city" onchange="location = this.value;">
 <option value="">Select-Sorting Type</option>
- <option value="http://localhost:8020/GrizzlyStore/SortByRatingServlet?order=LowToHigh">Low To High</option>
- <option value="http://localhost:8020/GrizzlyStore/SortByRatingServlet?order=HighToLow">High To Low</option>
+ <option value="SortByRating.html?order=LowToHigh">Low To High</option>
+ <option value="SortByRating.html?order=HighToLow">High To Low</option>
 </select>  &emsp;&emsp;&emsp;&emsp;&emsp;
 </form>
-		<form class= "mx-2 my-auto w-full" action="RedirectToAddProductServlet" method="POST">
-												<input id="prodId" name="userId" type="hidden" value=${user.userId}>   
-                                                       <a href="FetchCategoryServlet" class="btn btn-dark form-rounded" >Add Product</a>
+		<form class= "mx-2 my-auto w-full" action="" method="POST">
+												<input id="prodId" name="userId" type="hidden" value=${user.userName}>   
+                                                       <a href="Admin-AddProduct.html" class="btn btn-dark form-rounded" >Add Product</a>
 					</form>
 <form>
                         </div>
@@ -144,7 +143,7 @@ ${user.designation}
                                      <table border="1" class="table table-bordered">
                                             <tr>
                                                 <td>
-                                                    <center><span style="color: gray">List</span>
+                                                    <center><span style="color: gray">Name</span>
                                                 </td>
                                                 <td>
                                                         <center> <span style="color: gray">Brand</span>
@@ -181,12 +180,12 @@ ${user.designation}
                           </td>
                           <td>
                             <center>
-                              <a href="FetchProductServlet?id=${product.id}" class="btn btn-secondary form-rounded"  width="50px"> &emsp;View&emsp; 
+                              <a href="viewProduct.html?id=${product.productId}" class="btn btn-secondary form-rounded"  width="50px"> &emsp;View&emsp; 
                               </a>&emsp;&emsp;
-								<input id="prodId" name="userId" type="hidden" value=${user.userId}>
+								<input id="prodId" name="userName" type="hidden" value=${user.userName}>
                               <button class="btn btn-secondary form-rounded" type="button"> &emsp;Block&emsp; 
                               </button>&emsp;&emsp;
-                              <a  href="DeleteProductServlet?id=${product.id }" class="btn btn-secondary form-rounded">&nbsp;Remove&nbsp; 
+                              <a  href="deleteProduct.html?id=${product.productId }" class="btn btn-secondary form-rounded">&nbsp;Remove&nbsp; 
                               </a>
                             </center>
                           </td>

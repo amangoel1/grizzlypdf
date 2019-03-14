@@ -19,7 +19,7 @@
             <div class="form-group row topnav1 ">
                     <label for="fname" class="col-sm-5 col-form-label"></label>
                     <div class="col-sm-2">
-        <input type="text" name="userName" placeholder="Username" class="form-control form-rounded" id="userId" required > 
+        <input type="text" name="userName" placeholder="Username" class="form-control form-rounded"  required > 
     </div>
    </div>
             <div class="form-group row topnav1 ">

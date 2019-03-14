@@ -83,7 +83,7 @@
         </li>
         <li class="nav-item">
           <span class="navbar-text">
-            Welcome, ${username}
+            Welcome, ${user.userName}
             
           </span>
         </li>
@@ -91,7 +91,7 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <form class= "mx-2 my-auto w-full" method="GET">
-            <a href="LogoutServlet" class="btn btn-secondary  form-rounded" >Logout
+            <a href="logout.html" class="btn btn-secondary  form-rounded" >Logout
             
             </a>
           </form>
@@ -124,7 +124,7 @@
             <img src="images/profile.png" alt="Profile Picture" width="25%">
             <br>
             <br>
-            <b> ${user.name}
+            <b> ${user.userName}
             </b>
             <br>
             <br>

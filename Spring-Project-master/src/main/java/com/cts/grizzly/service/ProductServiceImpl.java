@@ -25,22 +25,22 @@ public class ProductServiceImpl implements ProductService{
 
 	public List<Product> getAllProducts() {
 		// TODO Auto-generated method stub
-		return null;
+		return productDAO.getAllProducts();
 	}
 
 	public Product findProduct(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		return productDAO.findProduct(id);
 	}
 
 	public String deleteProduct(String productId) {
 		// TODO Auto-generated method stub
-		return null;
+		return productDAO.deleteProduct(productId);
 	}
 
 	public List<Product> filterProducts(String query) {
 		// TODO Auto-generated method stub
-		return null;
+		return productDAO.filterProducts(query);
 	}
 
 }

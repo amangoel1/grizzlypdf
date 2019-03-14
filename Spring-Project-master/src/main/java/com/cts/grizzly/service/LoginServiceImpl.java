@@ -44,7 +44,7 @@ public class LoginServiceImpl implements LoginService{
 
 	@Override
 	public void resetStatus(Profile profile) {
-		// TODO Auto-generated method stub
+		loginDAO.resetStatus(profile);// TODO Auto-generated method stub
 		
 	}
 
